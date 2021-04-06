@@ -24,3 +24,12 @@ function carregar(){
         msg.innerHTML = `Boa noite, são ${hora} horas!`
     }
 }
+
+function verificar(){
+    var data = new Date()
+    var ano = data.getUTCFullYear()
+
+    var fano = document.getElementById('txtano')
+    var fsex = document.getElementById('')
+    
+}
