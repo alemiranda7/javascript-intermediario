@@ -32,13 +32,49 @@ function verificar() {
     var textoAno = document.querySelector('input#txtano')
     //var radiosexo = document.querySelector('input#radsex')
     var resposta = document.querySelector('div#res')
+    var img = document.createElement('img')
+    img.setAttribute('id', 'foto')
 
     if (textoAno.value.length == 0 || textoAno.value > ano) {
         alert('Data Inválida! tenta novamente.')
-    }else{
-        var radiosexo = document.getElementsByName('radsex')
+    } else {
+        var radioSexo = document.getElementsByName('radsex')
         var idade = ano - textoAno.value
-        resposta.innerHTML = `A idade calculada foi ${idade}.`
+        var genero = ''
+        if (radioSexo[0].checked) {
+            genero = 'Masculino'
+            if (idade >= 0 && idade <= 10) {
+                //bebe
+                img.setAttribute('src', 'img/bebeMenino.png')
+            } else if (idade < 21) {
+                //criança
+                img.setAttribute('src', 'img/jovemHomem.png')
+            } else if (idade < 50) {
+                //homem
+                img.setAttribute('src', 'img/adultoHomem.png')
+            } else {
+                //senhor
+                img.setAttribute('src', 'img/senhorHomem.png')
+            }
+        } else if(radioSexo[1].checked){
+            genero = 'Feminino'
+            if (idade >= 0 && idade <= 10) {
+                //bebe
+                img.setAttribute('src', 'img/bebeMenina.png')
+            } else if (idade < 21) {
+                //menina
+                img.setAttribute('src', 'img/jovemMulher.png')
+            } else if (idade < 50) {
+                //mulher
+                img.setAttribute('src', 'img/adultaMulher.png')
+            } else {
+                //senhora
+                img.setAttribute('src', 'img/senhoraMulher.png')
+            }
+        }
+        resposta.innerHTML = `Detectamos sexo ${genero} com idade  ${idade} anos.`
+        resposta.style.textAlign = 'center'
+        resposta.appendChild(img)
     }
 
 }
