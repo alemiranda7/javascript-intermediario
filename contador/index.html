@@ -11,20 +11,22 @@
 
 <body>
     <header>Contagem de Números</header>
+
+    <div class="sidenav">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+      
+
     <section>
         <div id='formulario'>
-            <p>
-                Inicio: <input type="number" name="primeiroNumero" id="n1">
-            </p>
-            <p>
-                Fim: <input type="number" name="ultimoNumero" id="n2">
-            </p>
-            <p>
-                Passo: <input type="number" name="passo" id="n3">
-            </p>
+            <p>Inicio: <input type="number" name="primeiroNumero" id="n1"></p>
+            <p>Fim: <input type="number" name="ultimoNumero" id="n2"></p>
+            <p>Passo: <input type="number" name="passo" id="n3"></p>
             <input type="button" value="Contar" id="contar" onclick=contar()>
         </div>
-
 
         <div id='res'>
             <p>Aqui vai ficar a contagem</p>
