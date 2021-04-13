@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +8,26 @@
     <title>Tabuada</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>Tabuada</header>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
     <section>
-        <div id="form">Número: <input type="number" name="number" id="txtn"> <input type="button" value="Gerar Tabuada" onclick=gerar()></div>
-        <div id="resp">
-            
+        <div id="form">
+            Número: <input type="number" name="number" id="txtn"> <input type="button" value="Gerar Tabuada"
+                onclick="tabuada()"></div>
+        <div id="resp" class="resp">
+            <p>Aguardando gerar a tabuada...</p>
+            <select name="tabuada" id="tabuada" size="10">
+                <option value="">Digite um numero acima</option>
+            </select>
         </div>
     </section>
-    <footer><p>&copy; Tabuada do Curso em Vídeo</p></footer>
+    <footer>
+        <p>&copy; Tabuada do Curso em Vídeo</p>
+    </footer>
     <script src="script.js"></script>
 </body>
+
 </html>
