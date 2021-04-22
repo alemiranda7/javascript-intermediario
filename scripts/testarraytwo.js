@@ -14,3 +14,9 @@ for(let pos = 0;pos<num.length;pos++){
 }
 
 console.log(num.sort())
+console.log('----------------------------------')
+
+let valores = [5,4,6,1,2,3,7,8,9]
+for(let pos in valores){
+    console.log(valores[pos])
+}
