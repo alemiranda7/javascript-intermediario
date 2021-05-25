@@ -13,4 +13,4 @@ console.log('Começando com o FOR')
 for (let c = 1; c <= 5; c++) {
     console.log('Testando' + c)
 }
-console.log('Terminando com o For')
+console.log('FIM do For')
