@@ -14,3 +14,4 @@ for (let c = 1; c <= 5; c++) {
     console.log('Testando' + c)
 }
 console.log('FIM do For')
+
